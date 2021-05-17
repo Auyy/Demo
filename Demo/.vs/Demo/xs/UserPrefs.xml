@@ -1,0 +1,39 @@
+﻿<Properties StartupConfiguration="{F9288D33-0E60-4584-AB70-AC89C829014D}|Default">
+  <MonoDevelop.Ide.ItemProperties.Demo PreferredExecutionTarget="/Applications/Google Chrome.app" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Demo/Repositories/MovieRepository.cs">
+    <Files>
+      <File FileName="Demo/Models/Movie.cs" Line="11" Column="2" />
+      <File FileName="Demo/Repositories/MovieRepository.cs" Line="54" Column="1" />
+      <File FileName="Demo/Controllers/HomeController.cs" Line="23" Column="1" />
+      <File FileName="Demo/Services/MovieServices.cs" Line="30" Column="50" />
+      <File FileName="Demo/ApiControllers/MovieApiController.cs" Line="40" Column="33" />
+      <File FileName="Demo/Startup.cs" Line="48" Column="14" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="Demo" expanded="True">
+            <Node name="Demo" expanded="True">
+              <Node name="Dependencies" expanded="True">
+                <Node name="PackageDependencies" expanded="True" />
+              </Node>
+              <Node name="ApiControllers" expanded="True" />
+              <Node name="Controllers" expanded="True" />
+              <Node name="Models" expanded="True" />
+              <Node name="Repositories" expanded="True">
+                <Node name="MovieRepository.cs" selected="True" />
+              </Node>
+              <Node name="Services" expanded="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>

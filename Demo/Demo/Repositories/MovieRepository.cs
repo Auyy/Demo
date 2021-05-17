@@ -43,9 +43,9 @@ namespace Demo.Repositories
         public int Add(Movie movie)
         {
             var response  = 0;
-            var sqlCommand = string.Format(@"INSERT INTO [Movie]
-                                                       ([Title]
-                                                       ,[Link])
+            var sqlCommand = string.Format(@"INSERT INTO Movie
+                                                       (Title
+                                                       ,Link)
                                                  VALUES
                                                        (@Title
                                                        ,@Link)");

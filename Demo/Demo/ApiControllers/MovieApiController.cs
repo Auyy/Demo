@@ -34,13 +34,24 @@ namespace Demo.ApiControllers
         {
             return movieServices.GetById(id);
         }
+
         [HttpPost()]
         public bool Add([FromBody] Movie movie)
         {
             return movieServices.Add(movie);
         }
 
+        //[HttpPost("{id:int}")]
+        //public int Update([FromBody] Movie movie,int id)
+        //{
+        //    return movieServices.Update(movie,id);
+        //}
 
+        [HttpDelete("{id:int}")]
+        public Movie Delete(int id)
+        {
+            return movieServices.Delete(id);
+        }
 
     }
 }

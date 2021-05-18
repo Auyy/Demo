@@ -30,14 +30,14 @@ namespace Demo.Services
             return movieRepository.Add(movie) > 0;
         }
 
-        //public bool Update(Movie movie)
+        //public int Update(Movie movie,int id)
         //{
-        //    return movieRepository.Update(movie);
-        //}
-        //public bool Delete(int id)
-        //{
-        //    return movieRepository.Delete(id);
+        //    return movieRepository.Update(movie,id);
         //}
 
+        public Movie Delete(int id)
+        {
+            return movieRepository.Delete(id);
+        }
     }
 }

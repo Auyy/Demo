@@ -23,7 +23,10 @@ namespace Demo.Controllers
         {
 
            var movieRepository = new MovieRepository();
-            var movies = movieRepository.GetAll();
+           var movies = movieRepository.GetAll();
+
+           var theaterRepository = new TheaterRepository();
+           var theater = theaterRepository.GetAll();
             return View();
         }
 

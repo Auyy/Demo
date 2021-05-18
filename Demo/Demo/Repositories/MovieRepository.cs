@@ -25,7 +25,7 @@ namespace Demo.Repositories
                 models = db.Query<Movie>("SELECT * FROM Movie").ToList();
             }
             return models;
-        }
+        } // run ทุกอย่างออกมา
 
         public Movie GetById(int id)
         {
@@ -38,14 +38,15 @@ namespace Demo.Repositories
                 }).FirstOrDefault();
             }
             return models;
-        }
+        } // run เลือกดูอย่าง detail 
 
+      
         public int Add(Movie movie)
         {
             var response  = 0;
-            var sqlCommand = string.Format(@"INSERT INTO [Movie]
-                                                       ([Title]
-                                                       ,[Link])
+            var sqlCommand = string.Format(@"INSERT INTO Movie
+                                                       (Title
+                                                       ,Link)
                                                  VALUES
                                                        (@Title
                                                        ,@Link)");
@@ -58,6 +59,41 @@ namespace Demo.Repositories
                 });
             }
             return response;
-        }
+        } // สร้างเพิ่มขึ้นมา
+
+
+        //public int Update(Movie movie,int id)
+        //{
+        //    var models = 0;
+        //    var sqlCommand = string.Format(@"UPDATE Movie SET Title=@Title ,Link=@Link WHERE Id = @Id)");
+
+        //    using (var db = new MySqlConnection(connectionString))
+        //    {
+        //        models = db.Execute(sqlCommand, new
+        //        {
+        //            Title = movie.Title,
+        //            Link = movie.Link,
+        //            Id = id
+        //        });
+        //    }
+        //    return models;
+        //}
+
+
+
+        public Movie Delete(int id)
+        {
+            var models = new Movie();
+            using (var db = new MySqlConnection(connectionString))
+            {
+                models = db.Query<Movie>("DELETE FROM Movie WHERE Id = @Id", new
+                {
+                    Id = id
+                }).FirstOrDefault();
+            }
+            return models;
+        } // ลบข้อมูล 
+
     }
+    
 }

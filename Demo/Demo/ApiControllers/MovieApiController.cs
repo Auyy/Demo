@@ -41,11 +41,11 @@ namespace Demo.ApiControllers
             return movieServices.Add(movie);
         }
 
-        //[HttpPost("{id:int}")]
-        //public int Update([FromBody] Movie movie,int id)
-        //{
-        //    return movieServices.Update(movie,id);
-        //}
+        [HttpPost("{id:int}")]
+        public int Update([FromBody] Movie movie, int id)
+        {
+            return movieServices.Update(movie, id);
+        }
 
         [HttpDelete("{id:int}")]
         public Movie Delete(int id)

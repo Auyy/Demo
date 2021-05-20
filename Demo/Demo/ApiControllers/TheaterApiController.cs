@@ -40,5 +40,17 @@ namespace Demo.ApiControllers
             return theaterServices.Add(theater);
         }
 
+        [HttpPost("{id:int}")]
+        public int Update([FromBody] Theater theater, int id)
+        {
+            return theaterServices.Update(theater, id);
+        }
+
+        [HttpDelete("{id:int}")]
+        public Theater Delete(int id)
+        {
+            return theaterServices.Delete(id);
+        }
+
     }
 }

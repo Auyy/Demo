@@ -27,5 +27,15 @@ namespace Demo.Services
         {
             return broadingRepository.Add(broading) > 0;
         }
+
+        public int Update(Broading broading, int id)
+        {
+            return broadingRepository.Update(broading, id);
+        }
+
+        public Broading Delete(int id)
+        {
+            return broadingRepository.Delete(id);
+        }
     }
 }

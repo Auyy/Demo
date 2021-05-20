@@ -40,5 +40,16 @@ namespace Demo.ApiControllers
             return broadingServices.Add(broading);
         }
 
+        [HttpPost("{id:int}")]
+        public int Update([FromBody] Broading broading, int id)
+        {
+            return broadingServices.Update(broading, id);
+        }
+
+        [HttpDelete("{id:int}")]
+        public Broading Delete(int id)
+        {
+            return broadingServices.Delete(id);
+        }
     }
 }

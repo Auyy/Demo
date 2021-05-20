@@ -29,5 +29,15 @@ namespace Demo.Services
         {
             return theaterRepository.Add(theater) > 0;
         }
+
+        public int Update(Theater theater, int id)
+        {
+            return theaterRepository.Update(theater, id);
+        }
+
+        public Theater Delete(int id)
+        {
+            return theaterRepository.Delete(id);
+        }
     }
 }

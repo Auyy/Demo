@@ -59,5 +59,35 @@ namespace Demo.Repositories
             }
             return response;
         } // สร้างเพิ่มขึ้นมา
+
+        public int Update(Broading broading, int id)
+        {
+            var models = 0;
+            var sqlCommand = string.Format(@"UPDATE Broading SET FK_MovieId=@FK_MovieId ,FK_TheaterId=@FK_TheaterId WHERE Id = @Id");
+
+            using (var db = new MySqlConnection(connectionString))
+            {
+                models = db.Execute(sqlCommand, new
+                {
+                    FK_MovieId = broading.FK_MovieId,
+                    FK_TheaterId = broading.FK_TheaterId,
+                    Id = id
+                });
+            }
+            return models;
+        }// แก้ไขได้
+
+        public Broading Delete(int id)
+        {
+            var models = new Broading();
+            using (var db = new MySqlConnection(connectionString))
+            {
+                models = db.Query<Broading>("DELETE FROM Broading WHERE Id = @Id", new
+                {
+                    Id = id
+                }).FirstOrDefault();
+            }
+            return models;
+        } // ลบข้อมูล 
     }
 }

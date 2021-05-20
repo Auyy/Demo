@@ -62,23 +62,22 @@ namespace Demo.Repositories
         } // สร้างเพิ่มขึ้นมา
 
 
-        //public int Update(Movie movie,int id)
-        //{
-        //    var models = 0;
-        //    var sqlCommand = string.Format(@"UPDATE Movie SET Title=@Title ,Link=@Link WHERE Id = @Id)");
+        public int Update(Movie movie, int id)
+        {
+            var models = 0;
+            var sqlCommand = string.Format(@"UPDATE Movie SET Title=@Title ,Link=@Link WHERE Id = @Id");
 
-        //    using (var db = new MySqlConnection(connectionString))
-        //    {
-        //        models = db.Execute(sqlCommand, new
-        //        {
-        //            Title = movie.Title,
-        //            Link = movie.Link,
-        //            Id = id
-        //        });
-        //    }
-        //    return models;
-        //}
-
+            using (var db = new MySqlConnection(connectionString))
+            {
+                models = db.Execute(sqlCommand, new
+                {
+                    Title = movie.Title,
+                    Link = movie.Link,
+                    Id = id
+                });
+            }
+            return models;
+        }// แก้ไขได้
 
 
         public Movie Delete(int id)
